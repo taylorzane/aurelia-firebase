@@ -27,7 +27,7 @@ export class FB{
   }
 
   authWithFirebase(){
-    this.fb.authWithOAuthRedirect("github", (error, authData) => {
+    this.fb.authWithOAuthPopup("github", (error, authData) => {
       debugger
       if (error) {
         console.log("Login Failed!", error);
