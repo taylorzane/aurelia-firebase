@@ -1,0 +1,28 @@
+template
+  section
+    .row
+      .col-lg-2(style='background-color: green')
+      .col-lg-8
+        h2 ${heading}
+        h3(style='display:inline') Authenticated?:&nbsp;
+        h3(style="display: inline;color: ${authed ? 'green' : 'red'}") ${authed ? "✔︎" : "✗"}
+        pre.
+          Name: ${authData.github.displayName}
+          Username: ${authData.github.username}
+          Email: ${authData.github.email}
+          uid: ${authData.uid}
+          Token: ${authData.token}
+        a.btn.btn-default(click.trigger='authWithFirebase()') Authenticate
+        svg(version='1.1', x='0', y='0', width='768', height='128', viewbox='0, 0, 768, 128')
+          text(x='384', y='64', fill='#26C493', font-family='Source Code Pro', font-size='36pt', font-weight='200', text-anchor='middle', alignment-baseline='central') ${title}
+          text(x='384', y='108', fill='#eee', font-family='Source Code Pro', font-size='21pt', font-weight='200', text-anchor='middle', alignment-baseline='central') ${subtitle}
+        form(role='form', submit.delegate='logFb()')
+          .form-group
+            label(for='title') Title:
+            input#title(value.bind='title')
+          .form-group
+            label(for='subtitle') Subtitle:
+            input#subtitle(value.bind='subtitle')
+          button.btn.btn-default(type='submit') Submit to Firebase
+          h3 ${notice}
+      .col-lg-2

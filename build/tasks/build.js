@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var runSequence = require('run-sequence');
 var changed = require('gulp-changed');
+var jade = require('gulp-jade');
 var plumber = require('gulp-plumber');
 var to5 = require('gulp-babel');
 var sourcemaps = require('gulp-sourcemaps');
@@ -29,6 +30,14 @@ gulp.task('build-html', function () {
     .pipe(gulp.dest(paths.output));
 });
 
+// compiles jade files and outputs to output directory
+gulp.task('build-jade', function (){
+  return gulp.src(paths.jade)
+    .pipe(plumber())
+    .pipe(jade({pretty: true, locals: { web: true }}))
+    .pipe(gulp.dest(paths.output));
+});
+
 // this task calls the clean task (located
 // in ./clean.js), then runs the build-system
 // and build-html tasks in parallel
@@ -36,7 +45,7 @@ gulp.task('build-html', function () {
 gulp.task('build', function(callback) {
   return runSequence(
     'clean',
-    ['build-system', 'build-html'],
+    ['build-system', 'build-html', 'build-jade'],
     callback
   );
 });

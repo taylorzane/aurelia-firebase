@@ -1,0 +1,60 @@
+{
+  "name": "uglify-js",
+  "description": "JavaScript parser, mangler/compressor and beautifier toolkit",
+  "homepage": "http://lisperator.net/uglifyjs",
+  "main": "tools/node.js",
+  "version": "2.2.5",
+  "engines": {
+    "node": ">=0.4.0"
+  },
+  "maintainers": [
+    {
+      "name": "caires",
+      "email": "cairesvs@gmail.com"
+    },
+    {
+      "name": "mape",
+      "email": "mape@mape.me"
+    },
+    {
+      "name": "mishoo",
+      "email": "mihai.bazon@gmail.com"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/mishoo/UglifyJS2.git"
+    }
+  ],
+  "bin": {
+    "uglifyjs": "bin/uglifyjs"
+  },
+  "scripts": {
+    "test": "node test/run-tests.js"
+  },
+  "_id": "uglify-js@2.2.5",
+  "dist": {
+    "shasum": "a6e02a70d839792b9780488b7b8b184c095c99c7",
+    "tarball": "http://registry.npmjs.org/uglify-js/-/uglify-js-2.2.5.tgz"
+  },
+  "_npmVersion": "1.1.66",
+  "_npmUser": {
+    "name": "mishoo",
+    "email": "mihai.bazon@gmail.com"
+  },
+  "format": "cjs",
+  "ignore": [
+    "node_modules"
+  ],
+  "registry": "npm",
+  "dependencies": {
+    "source-map": "source-map@~0.1.7",
+    "optimist": "optimist@~0.3.5",
+    "path": "github:jspm/nodelibs-path@^0.1.0",
+    "fs": "github:jspm/nodelibs-fs@^0.1.0",
+    "vm": "github:jspm/nodelibs-vm@^0.1.0",
+    "util": "github:jspm/nodelibs-util@^0.1.0",
+    "process": "github:jspm/nodelibs-process@^0.1.0"
+  }
+}

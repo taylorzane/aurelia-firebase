@@ -1,0 +1,1 @@
+module.exports = require("npm:gulp-jade@1.0.0/index");

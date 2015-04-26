@@ -1,0 +1,44 @@
+{
+  "name": "css",
+  "version": "1.0.8",
+  "description": "CSS parser / stringifier using css-parse and css-stringify",
+  "keywords": [
+    "css",
+    "parser",
+    "stylesheet"
+  ],
+  "author": {
+    "name": "TJ Holowaychuk",
+    "email": "tj@vision-media.ca"
+  },
+  "main": "index",
+  "_id": "css@1.0.8",
+  "dist": {
+    "shasum": "9386811ca82bccc9ee7fb5a732b1e2a317c8a3e7",
+    "tarball": "http://registry.npmjs.org/css/-/css-1.0.8.tgz"
+  },
+  "_from": ".",
+  "_npmVersion": "1.2.14",
+  "_npmUser": {
+    "name": "tjholowaychuk",
+    "email": "tj@vision-media.ca"
+  },
+  "maintainers": [
+    {
+      "name": "tjholowaychuk",
+      "email": "tj@vision-media.ca"
+    }
+  ],
+  "format": "cjs",
+  "ignore": [
+    "node_modules"
+  ],
+  "registry": "npm",
+  "dependencies": {
+    "css-parse": "css-parse@1.0.4",
+    "css-stringify": "css-stringify@1.0.5",
+    "fs": "github:jspm/nodelibs-fs@^0.1.0",
+    "process": "github:jspm/nodelibs-process@^0.1.0",
+    "assert": "github:jspm/nodelibs-assert@^0.1.0"
+  }
+}
