@@ -1,0 +1,26 @@
+<template>
+  <section>
+    <center>
+      <h2>${heading}</h2>
+
+      <a click.trigger="authWithFirebase()" class="btn btn-default">Authenticate</a>
+
+      <form role="form" submit.delegate="logFb()">
+        <div class="form-group">
+          <label for="title">Title:</label>
+          <input value.bind="title" id="title"></input>
+        </div>
+        <div class="form-group">
+          <label for="subtitle">Subtitle:</label>
+          <input value.bind="subtitle" id="subtitle"></input>
+        </div>
+        <button type="submit" class="btn btn-default">Submit to Firebase</button>
+      </form>
+
+      <svg version="1.1" x="0" y="0" width="768" height="128" viewbox="0, 0, 768, 128">
+        <text x="384" y="64" fill="#26C493" font-family="Source Code Pro" font-size="36pt" font-weight="200" text-anchor="middle" alignment-baseline="central">${title}</text>
+        <text x="384" y="108" fill="#eee" font-family="Source Code Pro" font-size="21pt" font-weight="200" text-anchor="middle" alignment-baseline="central">${subtitle}</text>
+      </svg>
+    </center>
+  </section>
+</template>
