@@ -1,0 +1,54 @@
+{
+  "author": {
+    "name": "Firebase"
+  },
+  "email": "operations@firebase.com",
+  "name": "firebase",
+  "description": "Firebase library for Node.js",
+  "version": "2.2.2",
+  "main": "./lib/firebase-web.js",
+  "browser": "./lib/firebase-web.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Firebase",
+    "synchronization",
+    "real-time",
+    "websocket"
+  ],
+  "repository": {
+    "type": "none",
+    "url": "https://www.firebase.com/"
+  },
+  "_id": "firebase@2.2.2",
+  "_shasum": "a35b0528ca3034600a30995dafd4bfe94106f074",
+  "_from": ".",
+  "_npmVersion": "1.4.23",
+  "_npmUser": {
+    "name": "firebase",
+    "email": "operations@firebase.com"
+  },
+  "maintainers": [
+    {
+      "name": "firebase",
+      "email": "info@envolve.com"
+    }
+  ],
+  "dist": {
+    "shasum": "a35b0528ca3034600a30995dafd4bfe94106f074",
+    "tarball": "http://registry.npmjs.org/firebase/-/firebase-2.2.2.tgz"
+  },
+  "format": "cjs",
+  "ignore": [
+    "node_modules"
+  ],
+  "registry": "npm",
+  "dependencies": {
+    "faye-websocket": "faye-websocket@*",
+    "http": "github:jspm/nodelibs-http@^1.7.0",
+    "https": "github:jspm/nodelibs-https@^0.1.0",
+    "buffer": "github:jspm/nodelibs-buffer@^0.1.0",
+    "process": "github:jspm/nodelibs-process@^0.1.0"
+  }
+}

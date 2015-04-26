@@ -1,0 +1,56 @@
+{
+  "name": "firenext",
+  "version": "3.1.4",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jogabo/firenext.git"
+  },
+  "description": "thin firebase wrapper to use promises and es6 generators.",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "2.1.1",
+    "chai-as-promised": "^4.3.0",
+    "jshint-stylish": "1.0.1",
+    "mocha": "2.1.0"
+  },
+  "engines": {
+    "node": ">= 0.12.0"
+  },
+  "gitHead": "8a3cb4dd586f55d6efed612391afebcf85ba876d",
+  "bugs": {
+    "url": "https://github.com/jogabo/firenext/issues"
+  },
+  "homepage": "https://github.com/jogabo/firenext",
+  "_id": "firenext@3.1.4",
+  "_shasum": "20b3eb499e7f742320dc39f093180506dad0d6c0",
+  "_from": ".",
+  "_npmVersion": "2.5.1",
+  "_nodeVersion": "0.12.0",
+  "_npmUser": {
+    "name": "pgherveou",
+    "email": "pgherveou@gmail.com"
+  },
+  "maintainers": [
+    {
+      "name": "pgherveou",
+      "email": "pgherveou@gmail.com"
+    }
+  ],
+  "dist": {
+    "shasum": "20b3eb499e7f742320dc39f093180506dad0d6c0",
+    "tarball": "http://registry.npmjs.org/firenext/-/firenext-3.1.4.tgz"
+  },
+  "format": "cjs",
+  "ignore": [
+    "node_modules"
+  ],
+  "registry": "npm",
+  "dependencies": {
+    "firebase": "firebase@2.2.2"
+  }
+}

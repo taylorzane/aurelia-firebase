@@ -1,0 +1,1 @@
+module.exports = require("npm:firenext@3.1.4/index");

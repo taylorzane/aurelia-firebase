@@ -1,0 +1,27 @@
+{
+  "name": "firenext",
+  "version": "3.1.4",
+  "repository": "git@github.com:jogabo/firenext.git",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "2.2.2"
+  },
+  "devDependencies": {
+    "chai": "2.1.1",
+    "chai-as-promised": "^4.3.0",
+    "jshint-stylish": "1.0.1",
+    "mocha": "2.1.0"
+  },
+  "engines": {
+    "node": ">= 0.12.0"
+  }
+}

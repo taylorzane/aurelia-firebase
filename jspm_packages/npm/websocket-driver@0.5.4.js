@@ -1,0 +1,1 @@
+module.exports = require("npm:websocket-driver@0.5.4/lib/websocket/driver");
