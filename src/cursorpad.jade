@@ -1,0 +1,192 @@
+template
+  section
+    h2 ${heading}
+    svg(version='1.1', x='0', y='0', width='365.805', height='401.7', viewbox='0, 0, 365.805, 401.7')
+      // Base
+      g
+        path(d='M117.413,276.945 L116.706,276.238 L157.717,235.226 L158.425,235.933 z', fill='#3A464F')
+        path(d='M231.897,162.394 L231.19,161.687 L272.201,120.675 L272.909,121.382 z', fill='#3A464F')
+        path(d='M272.916,276.226 L272.209,276.933 L231.197,235.922 L231.904,235.215 z', fill='#3A464F')
+        path(d='M158.432,161.675 L157.725,162.382 L116.713,121.37 L117.42,120.663 z', fill='#3A464F')
+      // Cursor Up
+      g(if.bind="!app.cursorUp")
+        path(d='M213.305,127.7 L195.205,109.7 L177.305,127.7', fill-opacity='0', stroke='white', stroke-width='2', stroke-miterlimit='10')
+      g(if.bind="app.cursorUp")
+        path(d='M160.546,162.409 C169.496,153.977 181.548,148.8 194.815,148.8 C208.082,148.8 220.134,153.977 229.084,162.409 L272.937,118.556 C252.76,98.908 225.203,86.8 194.815,86.8 C164.427,86.8 136.87,98.908 116.692,118.556 L160.546,162.409 z', fill='#566873')
+        path(d='M213.305,127.7 L195.205,109.7 L177.305,127.7', fill-opacity='0', stroke='white', stroke-width='2', stroke-miterlimit='10')
+      // Cursor Down
+      g(if.bind="!app.cursorDown")
+        path(d='M213.305,271 L195.205,288.9 L177.305,271', fill-opacity='0', stroke='white', stroke-width='2', stroke-miterlimit='10')
+      g(if.bind="app.cursorDown")
+        path(d='M229.084,235.191 C220.134,243.623 208.082,248.8 194.815,248.8 C181.548,248.8 169.496,243.623 160.546,235.191 L116.693,279.044 C136.87,298.692 164.427,310.8 194.815,310.8 C225.203,310.8 252.76,298.692 272.938,279.044 L229.084,235.191 z', fill='#566873')
+        path(d='M213.305,271 L195.205,288.9 L177.305,271', fill-opacity='0', stroke='white', stroke-width='2', stroke-miterlimit='10')
+      // Cursor Left
+      g(if.bind="!app.cursorLeft")
+        path(d='M123.605,217.2 L105.705,199.3 L123.605,181.4', fill-opacity='0', stroke='white', stroke-width='2', stroke-miterlimit='10')
+      g(if.bind="app.cursorLeft")
+        path(d='M158.424,233.069 C149.992,224.119 144.815,212.067 144.815,198.8 C144.815,185.533 149.992,173.481 158.424,164.531 L114.571,120.678 C94.923,140.855 82.815,168.412 82.815,198.8 C82.815,229.188 94.923,256.745 114.571,276.923 L158.424,233.069 z', fill='#566873')
+        path(d='M123.605,217.2 L105.705,199.3 L123.605,181.4', fill-opacity='0', stroke='white', stroke-width='2', stroke-miterlimit='10')
+      // Cursor Right
+      g(if.bind="!app.cursorRight")
+        path(d='M267.005,217.2 L284.905,199.3 L267.005,181.4', fill-opacity='0', stroke='white', stroke-width='2', stroke-miterlimit='10')
+      g(if.bind="app.cursorRight")
+        path(d='M275.059,120.677 L231.206,164.53 C239.638,173.481 244.815,185.533 244.815,198.8 C244.815,212.067 239.638,224.119 231.206,233.069 L275.059,276.922 C294.707,256.745 306.815,229.188 306.815,198.8 C306.815,168.412 294.707,140.855 275.059,120.677 z', fill='#566873')
+        path(d='M267.005,217.2 L284.905,199.3 L267.005,181.4', fill-opacity='0', stroke='white', stroke-width='2', stroke-miterlimit='10')
+      // Select
+      g(if.bind="!app.select")
+        path(d='M242.805,198.8 C242.805,225.31 221.315,246.8 194.805,246.8 C168.295,246.8 146.805,225.31 146.805,198.8 C146.805,172.29 168.295,150.8 194.805,150.8 C221.315,150.8 242.805,172.29 242.805,198.8 z', fill='#233038', fill-opacity='0.6')
+        text(x='194', y='200', fill='#9FB3B7', font-family='Avenir Next', font-size='16pt', font-weight='600', text-anchor='middle') OK
+      g(if.bind="app.select")
+        path(d='M242.805,198.8 C242.805,225.31 221.315,246.8 194.805,246.8 C168.295,246.8 146.805,225.31 146.805,198.8 C146.805,172.29 168.295,150.8 194.805,150.8 C221.315,150.8 242.805,172.29 242.805,198.8 z', fill='#566873')
+        text(x='194', y='200', fill='white', font-family='Avenir Next', font-size='16pt', font-weight='600', text-anchor='middle') OK
+      // Guide
+      path#widgetGuideTextPath(d='M77.105,318.7 C107.105,348.2 148.105,366.4 193.305,366.8', fill='none')
+      g(if.bind="!app.guide")
+        path(d='M193.305,312.8 C163.005,312.4 135.505,300.2 115.305,280.5 L77.105,318.7 C107.105,348.2 148.105,366.4 193.305,366.8 L193.305,312.8 z', fill='#3A464F')
+        g(transform='translate(9,-21)')
+          text(fill='#9FB3B7', font-family='Avenir Next', font-size='12pt', font-weight='600', text-anchor='middle')
+            textpath(xlink:href='#widgetGuideTextPath', startoffset='50%') GUIDE
+      g(if.bind="app.guide")
+        path(d='M193.305,312.8 C163.005,312.4 135.505,300.2 115.305,280.5 L77.105,318.7 C107.105,348.2 148.105,366.4 193.305,366.8 L193.305,312.8 z', fill='#566873')
+        g(transform='translate(9,-21)')
+          text(fill='white', font-family='Avenir Next', font-size='12pt', font-weight='600', text-anchor='middle')
+            textpath(xlink:href='#widgetGuideTextPath', startoffset='50%') GUIDE
+      // Info
+      path#widgetInfoTextPath(d='M196.305,366.8 C241.605,366.4 282.505,348.1 312.505,318.7', fill='none')
+      g(if.bind="!app.info")
+        path(d='M274.305,280.5 C254.105,300.2 226.605,312.4 196.305,312.8 L196.305,366.8 C241.605,366.4 282.505,348.1 312.505,318.7 L274.305,280.5 z', fill='#3A464F')
+        g(transform='translate(-9,-21)')
+          text(fill='#9FB3B7', font-family='Avenir Next', font-size='12pt', font-weight='600', text-anchor='middle')
+            textpath(xlink:href='#widgetInfoTextPath', startoffset='50%') INFO
+      g(if.bind="app.info")
+        path(d='M274.305,280.5 C254.105,300.2 226.605,312.4 196.305,312.8 L196.305,366.8 C241.605,366.4 282.505,348.1 312.505,318.7 L274.305,280.5 z', fill='#566873')
+        g(transform='translate(-9,-21)')
+          text(fill='white', font-family='Avenir Next', font-size='12pt', font-weight='600', text-anchor='middle')
+            textpath(xlink:href='#widgetInfoTextPath', startoffset='50%') INFO
+      // Menu
+      path#widgetMenuTextPath(fill='none', d='M196.305,84.9 C226.605,85.3 254.105,97.5 274.305,117.2')
+      g(if.bind="!app.menu")
+        path(d='M312.505,79 C282.505,49.5 241.505,31.3 196.305,30.9 L196.305,84.9 C226.605,85.3 254.105,97.5 274.305,117.2 L312.505,79 z', fill='#3A464F')
+        g(transform='translate(7,-17)')
+          text(fill='#9FB3B7', font-family='Avenir Next', font-size='12pt', font-weight='600', text-anchor='middle')
+            textpath(xlink:href='#widgetMenuTextPath', startoffset='50%') MENU
+      g(if.bind="app.menu")
+        path(d='M312.505,79 C282.505,49.5 241.505,31.3 196.305,30.9 L196.305,84.9 C226.605,85.3 254.105,97.5 274.305,117.2 L312.505,79 z', fill='#566873')
+        g(transform='translate(7,-17)')
+          text(fill='white', font-family='Avenir Next', font-size='12pt', font-weight='600', text-anchor='middle')
+            textpath(xlink:href='#widgetMenuTextPath', startoffset='50%') MENU
+      // Exit
+      path#widgetExitTextPath(fill='none', d='M115.305,117.1 C135.505,97.5 162.905,85.2 193.305,84.8')
+      g(if.bind="!app.exit")
+        path(d='M193.305,84.8 L193.305,30.8 C148.005,31.2 107.105,49.5 77.105,78.9 L115.305,117.1 C135.505,97.5 162.905,85.2 193.305,84.8 z', fill='#3A464F')
+        g(transform='translate(-7,-17)')
+          text(fill='#9FB3B7', font-family='Avenir Next', font-size='12pt', font-weight='600', text-anchor='middle')
+            textpath(xlink:href='#widgetExitTextPath', startoffset='50%') EXIT
+      g(if.bind="app.exit")
+        path(d='M193.305,84.8 L193.305,30.8 C148.005,31.2 107.105,49.5 77.105,78.9 L115.305,117.1 C135.505,97.5 162.905,85.2 193.305,84.8 z', fill='#566873')
+        g(transform='translate(-7,-17)')
+          text(fill='white', font-family='Avenir Next', font-size='12pt', font-weight='600', text-anchor='middle')
+            textpath(xlink:href='#widgetExitTextPath', startoffset='50%') EXIT
+      // Channel Common
+      g(if.bind="!app.channelDown || !app.channelUp")
+        path(d='M314.605,81.1 L276.405,119.3 C296.405,139.8 308.705,167.9 308.705,198.8 C308.705,229.7 296.405,257.8 276.405,278.3 L314.605,316.5 C344.405,286.2 362.805,244.6 362.805,198.8 C362.805,153 344.405,111.4 314.605,81.1 z', fill='#233038', opacity='0.6')
+        text(x='334', y='200', fill='#9FB3B7', font-family='Avenir Next', font-size='12pt', font-weight='600', text-anchor='middle') CH
+      g(if.bind="app.channelDown || app.channelUp")
+        path(d='M314.605,81.1 L276.405,119.3 C296.405,139.8 308.705,167.9 308.705,198.8 C308.705,229.7 296.405,257.8 276.405,278.3 L314.605,316.5 C344.405,286.2 362.805,244.6 362.805,198.8 C362.805,153 344.405,111.4 314.605,81.1 z', fill='#566873')
+        text(x='334', y='200', fill='white', font-family='Avenir Next', font-size='12pt', font-weight='600', text-anchor='middle') CH
+      // Channel Up
+      g(if.bind="!app.channelUp")
+        path(d='M346.205,173.3 L333.705,160.8 L321.205,173.3 z', fill='#3A464F')
+      g(if.bind="app.channelUp")
+        path(d='M346.205,173.3 L333.705,160.8 L321.205,173.3 z', fill='white')
+      // Channel Down
+      g(if.bind="!app.channelDown")
+        path(d='M346.205,224.3 L333.705,236.8 L321.205,224.3 z', fill='#3A464F')
+      g(if.bind="app.channelDown")
+        path(d='M346.205,224.3 L333.705,236.8 L321.205,224.3 z', fill='white')
+      // Volume Gauge
+      g(if.bind='!app.volumeIsRelative')
+        circle(cx='158.105', cy='387.3', r='3', fill.bind="app.volume > 0 ? (app.volumeMute ? '#D64957' : '#00AB73') : '#3A464F'")
+        circle(cx='140.205', cy='382.9', r='3', fill.bind="app.volume > 3 ? (app.volumeMute ? '#D64957' : '#00AB73') : '#3A464F'")
+        circle(cx='122.805', cy='376.8', r='3', fill.bind="app.volume > 6 ? (app.volumeMute ? '#D64957' : '#00AB73') : '#3A464F'")
+        circle(cx='106.005', cy='369', r='3', fill.bind="app.volume > 10 ? (app.volumeMute ? '#D64957' : '#00AB73') : '#3A464F'")
+        circle(cx='90.105', cy='359.7', r='3', fill.bind="app.volume > 13 ? (app.volumeMute ? '#D64957' : '#00AB73') : '#3A464F'")
+        circle(cx='75.105', cy='348.9', r='3', fill.bind="app.volume > 16 ? (app.volumeMute ? '#D64957' : '#00AB73') : '#3A464F'")
+        circle(cx='61.305', cy='336.7', r='3', fill.bind="app.volume > 20 ? (app.volumeMute ? '#D64957' : '#00AB73') : '#3A464F'")
+        circle(cx='48.705', cy='323.3', r='3', fill.bind="app.volume > 23 ? (app.volumeMute ? '#D64957' : '#00AB73') : '#3A464F'")
+        circle(cx='37.405', cy='308.7', r='3', fill.bind="app.volume > 26 ? (app.volumeMute ? '#D64957' : '#00AB73') : '#3A464F'")
+        circle(cx='27.505', cy='293.1', r='3', fill.bind="app.volume > 30 ? (app.volumeMute ? '#D64957' : '#00AB73') : '#3A464F'")
+        circle(cx='19.305', cy='276.6', r='3', fill.bind="app.volume > 33 ? (app.volumeMute ? '#D64957' : '#00AB73') : '#3A464F'")
+        circle(cx='12.605', cy='259.4', r='3', fill.bind="app.volume > 36 ? (app.volumeMute ? '#D64957' : '#00AB73') : '#3A464F'")
+        circle(cx='7.605', cy='241.6', r='3', fill.bind="app.volume > 40 ? (app.volumeMute ? '#D64957' : '#00AB73') : '#3A464F'")
+        circle(cx='4.405', cy='223.4', r='3', fill.bind="app.volume > 43 ? (app.volumeMute ? '#D64957' : '#00AB73') : '#3A464F'")
+        circle(cx='3.005', cy='205', r='3', fill.bind="app.volume > 46 ? (app.volumeMute ? '#D64957' : '#00AB73') : '#3A464F'")
+        circle(cx='3.205', cy='186.6', r='3', fill.bind="app.volume > 50 ? (app.volumeMute ? '#D64957' : '#00AB73') : '#3A464F'")
+        circle(cx='5.205', cy='168.2', r='3', fill.bind="app.volume > 53 ? (app.volumeMute ? '#D64957' : '#00AB73') : '#3A464F'")
+        circle(cx='9.005', cy='150.2', r='3', fill.bind="app.volume > 56 ? (app.volumeMute ? '#D64957' : '#00AB73') : '#3A464F'")
+        circle(cx='14.505', cy='132.6', r='3', fill.bind="app.volume > 60 ? (app.volumeMute ? '#D64957' : '#00AB73') : '#3A464F'")
+        circle(cx='21.705', cy='115.6', r='3', fill.bind="app.volume > 63 ? (app.volumeMute ? '#D64957' : '#00AB73') : '#3A464F'")
+        circle(cx='30.505', cy='99.3', r='3', fill.bind="app.volume > 66 ? (app.volumeMute ? '#D64957' : '#00AB73') : '#3A464F'")
+        circle(cx='40.905', cy='84', r='3', fill.bind="app.volume > 70 ? (app.volumeMute ? '#D64957' : '#00AB73') : '#3A464F'")
+        circle(cx='52.605', cy='69.8', r='3', fill.bind="app.volume > 73 ? (app.volumeMute ? '#D64957' : '#00AB73') : '#3A464F'")
+        circle(cx='65.605', cy='56.7', r='3', fill.bind="app.volume > 76 ? (app.volumeMute ? '#D64957' : '#00AB73') : '#3A464F'")
+        circle(cx='79.905', cy='45', r='3', fill.bind="app.volume > 80 ? (app.volumeMute ? '#D64957' : '#00AB73') : '#3A464F'")
+        circle(cx='95.205', cy='34.7', r='3', fill.bind="app.volume > 83 ? (app.volumeMute ? '#D64957' : '#00AB73') : '#3A464F'")
+        circle(cx='111.405', cy='25.8', r='3', fill.bind="app.volume > 86 ? (app.volumeMute ? '#D64957' : '#00AB73') : '#3A464F'")
+        circle(cx='128.305', cy='18.6', r='3', fill.bind="app.volume > 90 ? (app.volumeMute ? '#D64957' : '#00AB73') : '#3A464F'")
+        circle(cx='146.005', cy='13.1', r='3', fill.bind="app.volume > 93 ? (app.volumeMute ? '#D64957' : '#00AB73') : '#3A464F'")
+        circle(cx='164.005', cy='9.3', r='3', fill.bind="app.volume > 96 ? (app.volumeMute ? '#D64957' : '#00AB73') : '#3A464F'")
+        text(x='194', y='9', text-anchor='middle', font-family='Avenir Next', font-size='14pt', font-weight='600', fill.bind="app.volumeMute ? '#D64957' : '#00AB73'") ${app.volume}
+      // Volume Up
+      g(if.bind="!app.volumeUp")
+        path(d='M365.805,198.8 C365.805,153.2 347.905,111.7 318.805,81.1 L317.105,79.3 C305.405,67.6 305.405,48.6 317.105,36.9 C328.805,25.2 347.805,25.2 359.505,36.9 L365.805,43.2 L365.805,198.8 z', fill='#233038', fill-opacity='0.6')
+        g
+          path(d='M335.805,69.5 L335.805,48.5 L328.005,54.5 L327.405,55 L326.805,55 L322.805,55 L322.805,63 L326.605,63 L327.405,63 L328.105,63.6 z', fill.bind="app.volumeMute ? '#D64957' : '#00AB73'")
+          path(d='M349.705,70.3 L349.105,69.7 L349.505,69.4 C352.005,67 353.405,63.1 353.405,59 C353.305,54.9 351.805,51.1 349.205,48.7 L348.805,48.4 L349.405,47.8 L349.805,48.1 C352.605,50.6 354.205,54.7 354.305,59 C354.405,63.4 352.805,67.5 350.105,70 L349.705,70.3 z', fill.bind="app.volumeMute ? '#D64957' : '#00AB73'")
+          path(d='M345.605,67 L345.005,66.4 L345.405,66.1 C347.105,64.5 348.105,61.8 348.105,59 C348.105,56.2 347.005,53.6 345.305,52 L344.905,51.7 L345.505,51.1 L345.905,51.4 C347.805,53.2 348.905,56 349.005,59.1 C349.005,62.1 347.905,65.1 346.105,66.8 L345.605,67 z', fill.bind="app.volumeMute ? '#D64957' : '#00AB73'")
+          path(d='M341.205,64.2 L340.605,63.6 L341.005,63.3 C342.005,62.3 342.605,60.8 342.605,59.1 C342.605,57.4 342.005,55.9 341.005,54.9 L340.605,54.6 L341.205,54 L341.605,54.3 C342.805,55.5 343.505,57.2 343.505,59.1 C343.505,61 342.805,62.8 341.605,63.9 L341.205,64.2 z', fill.bind="app.volumeMute ? '#D64957' : '#00AB73'")
+      g(if.bind="app.volumeUp")
+        path(d='M365.805,198.8 C365.805,153.2 347.905,111.7 318.805,81.1 L317.105,79.3 C305.405,67.6 305.405,48.6 317.105,36.9 C328.805,25.2 347.805,25.2 359.505,36.9 L365.805,43.2 L365.805,198.8 z', fill='#566873')
+        g
+          path(d='M335.805,69.5 L335.805,48.5 L328.005,54.5 L327.405,55 L326.805,55 L322.805,55 L322.805,63 L326.605,63 L327.405,63 L328.105,63.6 z', fill='white')
+          path(d='M349.705,70.3 L349.105,69.7 L349.505,69.4 C352.005,67 353.405,63.1 353.405,59 C353.305,54.9 351.805,51.1 349.205,48.7 L348.805,48.4 L349.405,47.8 L349.805,48.1 C352.605,50.6 354.205,54.7 354.305,59 C354.405,63.4 352.805,67.5 350.105,70 L349.705,70.3 z', fill='white')
+          path(d='M345.605,67 L345.005,66.4 L345.405,66.1 C347.105,64.5 348.105,61.8 348.105,59 C348.105,56.2 347.005,53.6 345.305,52 L344.905,51.7 L345.505,51.1 L345.905,51.4 C347.805,53.2 348.905,56 349.005,59.1 C349.005,62.1 347.905,65.1 346.105,66.8 L345.605,67 z', fill='white')
+          path(d='M341.205,64.2 L340.605,63.6 L341.005,63.3 C342.005,62.3 342.605,60.8 342.605,59.1 C342.605,57.4 342.005,55.9 341.005,54.9 L340.605,54.6 L341.205,54 L341.605,54.3 C342.805,55.5 343.505,57.2 343.505,59.1 C343.505,61 342.805,62.8 341.605,63.9 L341.205,64.2 z', fill='white')
+      // Volume Down
+      g(if.bind="!app.volumeDown")
+        path(d='M365.805,198.8 C365.805,244.4 347.905,285.9 318.805,316.5 L317.105,318.3 C305.405,330 305.405,349 317.105,360.7 C328.805,372.4 347.805,372.4 359.505,360.7 L365.805,354.4 L365.805,198.8 z', fill='#233038', fill-opacity='0.6')
+        g
+          path(d='M335.805,350.6 L335.805,329.5 L328.005,335.5 L327.405,336 L326.805,336 L322.805,336 L322.805,344 L326.605,344 L327.405,344 L328.105,344.6 z', fill.bind="app.volumeMute ? '#D64957' : '#00AB73'")
+          path(d='M341.205,345.2 L340.605,344.6 L341.005,344.3 C342.005,343.3 342.605,341.8 342.605,340.1 C342.605,338.4 342.005,336.9 341.005,335.9 L340.605,335.6 L341.205,335 L341.605,335.3 C342.805,336.5 343.505,338.2 343.505,340.1 C343.505,342 342.805,343.8 341.605,344.9 L341.205,345.2 z', fill.bind="app.volumeMute ? '#D64957' : '#00AB73'")
+      g(if.bind="app.volumeDown")
+        path(d='M365.805,198.8 C365.805,244.4 347.905,285.9 318.805,316.5 L317.105,318.3 C305.405,330 305.405,349 317.105,360.7 C328.805,372.4 347.805,372.4 359.505,360.7 L365.805,354.4 L365.805,198.8 z', fill='#566873')
+        g
+          path(d='M335.805,350.6 L335.805,329.5 L328.005,335.5 L327.405,336 L326.805,336 L322.805,336 L322.805,344 L326.605,344 L327.405,344 L328.105,344.6 z', fill='white')
+          path(d='M341.205,345.2 L340.605,344.6 L341.005,344.3 C342.005,343.3 342.605,341.8 342.605,340.1 C342.605,338.4 342.005,336.9 341.005,335.9 L340.605,335.6 L341.205,335 L341.605,335.3 C342.805,336.5 343.505,338.2 343.505,340.1 C343.505,342 342.805,343.8 341.605,344.9 L341.205,345.2 z', fill='white')
+      // Volume Mute
+      g(if.bind="!app.volumeMute")
+        //- path(d='M201.044,397.555 L200.266,396.777 L212.287,384.755 L213.065,385.533 z', fill='#00AB7E')
+        //- path(d='M212.274,397.572 L200.254,385.552 L201.031,384.774 L213.052,396.795 z', fill='#00AB7E')
+        path(d='M193.105,401.7 L193.105,380.7 L185.305,386.7 L184.705,387.1 L184.105,387.1 L180.105,387.1 L180.105,395.2 L183.905,395.2 L184.705,395.2 L185.405,395.8 z', fill='#00AB7E')
+      g(if.bind="app.volumeMute")
+        path(d='M201.044,397.555 L200.266,396.777 L212.287,384.755 L213.065,385.533 z', fill='#D64957')
+        path(d='M212.274,397.572 L200.254,385.552 L201.031,384.774 L213.052,396.795 z', fill='#D64957')
+        path(d='M193.105,401.7 L193.105,380.7 L185.305,386.7 L184.705,387.1 L184.105,387.1 L180.105,387.1 L180.105,395.2 L183.905,395.2 L184.705,395.2 L185.405,395.8 z', fill='#D64957')
+      // Interactive
+      g(opacity='0')
+        path(mousedown.trigger='toggleAttr($event)', mouseup.trigger='toggleAttr($event)', id="cursorUp", d='M160.546,162.409 C169.496,153.977 181.548,148.8 194.815,148.8 C208.082,148.8 220.134,153.977 229.084,162.409 L272.937,118.556 C252.76,98.908 225.203,86.8 194.815,86.8 C164.427,86.8 136.87,98.908 116.692,118.556 L160.546,162.409 z', fill='#ED1C24', opacity='0.5')
+        path(mousedown.trigger='toggleAttr($event)', mouseup.trigger='toggleAttr($event)', id="cursorDown", d='M229.084,235.191 C220.134,243.623 208.082,248.8 194.815,248.8 C181.548,248.8 169.496,243.623 160.546,235.191 L116.693,279.044 C136.87,298.692 164.427,310.8 194.815,310.8 C225.203,310.8 252.76,298.692 272.938,279.044 L229.084,235.191 z', fill='#ED1C24', opacity='0.5')
+        path(mousedown.trigger='toggleAttr($event)', mouseup.trigger='toggleAttr($event)', id="cursorLeft", d='M158.424,233.069 C149.992,224.119 144.815,212.067 144.815,198.8 C144.815,185.533 149.992,173.481 158.424,164.531 L114.571,120.678 C94.923,140.855 82.815,168.412 82.815,198.8 C82.815,229.188 94.923,256.745 114.571,276.923 L158.424,233.069 z', fill='#ED1C24', opacity='0.5')
+        path(mousedown.trigger='toggleAttr($event)', mouseup.trigger='toggleAttr($event)', id="cursorRight", d='M275.059,120.677 L231.206,164.53 C239.638,173.481 244.815,185.533 244.815,198.8 C244.815,212.067 239.638,224.119 231.206,233.069 L275.059,276.922 C294.707,256.745 306.815,229.188 306.815,198.8 C306.815,168.412 294.707,140.855 275.059,120.677 z', fill='#ED1C24', opacity='0.5')
+        path(mousedown.trigger='toggleAttr($event)', mouseup.trigger='toggleAttr($event)', id="select", d='M242.805,198.8 C242.805,225.31 221.315,246.8 194.805,246.8 C168.295,246.8 146.805,225.31 146.805,198.8 C146.805,172.29 168.295,150.8 194.805,150.8 C221.315,150.8 242.805,172.29 242.805,198.8 z', fill='#ED1C24', fill-opacity='0.5')
+        path(mousedown.trigger='toggleAttr($event)', mouseup.trigger='toggleAttr($event)', id="channelUp", d='M308.805,198.8 C308.805,167.859 296.473,139.803 276.463,119.263 L314.647,81.079 C344.428,111.393 362.805,152.947 362.805,198.8 L308.805,198.8 z', fill='#ED1C24', opacity='0.5')
+        path(mousedown.trigger='toggleAttr($event)', mouseup.trigger='toggleAttr($event)', id="channelDown", d='M308.805,198.8 C308.805,229.741 296.473,257.797 276.463,278.337 L314.647,316.521 C344.428,286.207 362.805,244.653 362.805,198.8 L308.805,198.8 z', fill='#ED1C24', opacity='0.5')
+        path(mousedown.trigger='toggleAttr($event); volumeUp()', mouseup.trigger='toggleAttr($event)', id="volumeUp", d='M365.805,198.8 C365.805,153.2 347.905,111.7 318.805,81.1 L317.105,79.3 C305.405,67.6 305.405,48.6 317.105,36.9 C328.805,25.2 347.805,25.2 359.505,36.9 L365.805,43.2 L365.805,198.8 z', fill='#ED1C24', fill-opacity='0.5')
+        path(mousedown.trigger='toggleAttr($event); volumeDown()', mouseup.trigger='toggleAttr($event)', id="volumeDown", d='M365.805,198.8 C365.805,244.4 347.905,285.9 318.805,316.5 L317.105,318.3 C305.405,330 305.405,349 317.105,360.7 C328.805,372.4 347.805,372.4 359.505,360.7 L365.805,354.4 L365.805,198.8 z', fill='#ED1C24', fill-opacity='0.5')
+        circle(mousedown.trigger='toggleAttr($event)', id="volumeMute", cx='195', cy='390', r='20', fill='#ED1C24', opacity='0.5')
+        path(mousedown.trigger='toggleAttr($event)', mouseup.trigger='toggleAttr($event)', id="menu", d='M312.505,79 C282.505,49.5 241.505,31.3 196.305,30.9 L196.305,84.9 C226.605,85.3 254.105,97.5 274.305,117.2 L312.505,79 z', fill='#ED1C24', opacity='0.5')
+        path(mousedown.trigger='toggleAttr($event)', mouseup.trigger='toggleAttr($event)', id="exit", d='M193.305,84.8 L193.305,30.8 C148.005,31.2 107.105,49.5 77.105,78.9 L115.305,117.1 C135.505,97.5 162.905,85.2 193.305,84.8 z', fill='#ED1C24', opacity='0.5')
+        path(mousedown.trigger='toggleAttr($event)', mouseup.trigger='toggleAttr($event)', id="pageUp", d='M80.805,197.3 C81.205,167 93.405,139.5 113.105,119.3 L74.905,81.1 C45.405,111.1 27.205,152.1 26.805,197.3 L80.805,197.3 z', fill='#ED1C24', opacity='0.5')
+        path(mousedown.trigger='toggleAttr($event)', mouseup.trigger='toggleAttr($event)', id="pageDown", d='M113.105,278.3 C93.405,258.1 81.205,230.6 80.805,200.3 L26.805,200.3 C27.205,245.6 45.505,286.5 74.905,316.5 L113.105,278.3 z', fill='#ED1C24', opacity='0.5')
+        path(mousedown.trigger='toggleAttr($event)', mouseup.trigger='toggleAttr($event)', id="guide", d='M193.305,312.8 C163.005,312.4 135.505,300.2 115.305,280.5 L77.105,318.7 C107.105,348.2 148.105,366.4 193.305,366.8 L193.305,312.8 z', fill='#ED1C24', opacity='0.5')
+        path(mousedown.trigger='toggleAttr($event)', mouseup.trigger='toggleAttr($event)', id="info", d='M274.305,280.5 C254.105,300.2 226.605,312.4 196.305,312.8 L196.305,366.8 C241.605,366.4 282.505,348.1 312.505,318.7 L274.305,280.5 z', fill='#ED1C24', opacity='0.5')

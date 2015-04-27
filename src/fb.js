@@ -30,16 +30,14 @@ export class FB{
   }
 
   authWithFirebase() {
-    var oAuth = this.fb.authWithOAuthPopup("github", (error, authData) => {
+    this.fb.authWithOAuthPopup("github", (error, authData) => {
       if (error) {
         console.log("Login Failed!", error);
       } else {
         console.log("Authenticated successfully with payload:", authData);
         this.authData = authData;
       }
-    });
-
-    oAuth.then((res) => {
+    }).then((res) => {
       console.log(res);
       this.authData = res;
       this.authed = true;

@@ -10,8 +10,9 @@ export class App {
     this.router.configure(config => {
       config.title = 'Aurelia';
       config.map([
-        { route: ['','welcome'],  moduleId: './welcome',  nav: true, title:'Welcome' },
-        { route: 'firebase',      moduleId: './fb', nav: true, title:'Firebase' },
+        { route: ['','welcome'],  moduleId: './welcome',    nav: true, title:'Welcome' },
+        { route: 'firebase',      moduleId: './fb',         nav: true, title:'Firebase' },
+        { route: 'cursorpad',     moduleId: './cursorpad',  nav: true, title: 'Cursor Pad' }
       ]);
     });
   }
